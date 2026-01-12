@@ -1,0 +1,58 @@
+/* ===== FOOTER MAIN ===== */
+.footer {
+  background-color: #4b5b4b; /* ✅ SAME AS HEADER / TOPBAR */
+  color: #ffffff;
+  padding: 50px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+/* HEADINGS */
+.footer h4 {
+  margin-bottom: 15px;
+  color: #f2dd57; /* same yellow as header call strip */
+  font-weight: 600;
+}
+
+/* TEXT */
+.footer p {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* QUICK LINKS */
+.footer-links p {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-links p:hover {
+  color: #f2dd57;
+}
+
+/* ===== COPYRIGHT SECTION ===== */
+.copyright {
+  background-color: #f3f3f3;
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+}
+
+.fw-semi-bold {
+  font-weight: 600;
+}
+
+.py-4 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+}

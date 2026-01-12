@@ -1,0 +1,91 @@
+.team-section {
+  padding: 80px 50px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.team-subtitle {
+  font-size: 14px;
+  color: #6c9c74;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.team-title {
+  font-size: 32px;
+  color: #0b6b2f;
+  margin-bottom: 50px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.team-card h3 {
+  font-size: 18px;
+  color: #0b6b2f;
+  margin-bottom: 5px;
+}
+
+.team-card span {
+  font-size: 14px;
+  color: #888;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.team-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.team-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.team-icons i {
+  width: 34px;
+  height: 34px;
+  background: #f1f5f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b6b2f;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.team-icons i:hover {
+  background: #0b6b2f;
+  color: #ffffff;
+}
