@@ -1,58 +1,71 @@
 .topbar {
   width: 100%;
-  height: 38px;
-  background: #4b5b4b; /* exact dark green */
+  height: 44px;
+  background: #4b5b4b;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
-  font-size: 13px;
 }
 
 /* LEFT */
 .topbar-left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 18px;
 }
 
 .follow-text {
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
+/* ✅ REAL LOGO ICONS */
 .icon {
-  width: 22px;
-  height: 22px;
-  background: transparent;
   color: #ffffff;
-  font-size: 13px;
-  font-weight: 600;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  display: flex;
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
+  line-height: 1;
+  transition: 0.3s ease;
+}
+
+.icon i {
+  font-size: 18px; /* force all logos same size */
 }
 
 .icon:hover {
-  background: #f2dd57;
-  color: #1f2d1f;
+  color: #f2dd57;
 }
 
 /* RIGHT */
 .topbar-right {
-  background: #f2dd57; /* exact yellow */
+  background: #f2dd57;
   height: 100%;
-  padding: 0 20px;
+  padding: 0 22px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-weight: 600;
-  color: #1f2d1f;
+  justify-content: center;
+  gap: 10px;
+  min-width: 280px;
 }
 
 .phone-icon {
-  font-size: 14px;
+  font-size: 16px;
+  color: #1f2d1f;
+}
+
+.call-text {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #1f2d1f;
+}
+
+.call-number {
+  font-weight: 500;
 }

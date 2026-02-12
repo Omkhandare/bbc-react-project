@@ -5,12 +5,15 @@ import TopBar from "./components/TopBar";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
+import Services1 from "./components/Pages/Services1";
 import About from "./components/About";
 import Achievements from "./components/Achievements";
 import Products from "./components/Products";
 import Team from "./components/Team";
 import Careers from "./components/Careers";
-import Contact from "./components/Contact"; // ✅ ADD THIS
+import Contact from "./components/Contact";
+import Gallery1 from "./components/Gallery1";
+import VideoGallery from "./components/VideoGallery";
 import Footer from "./components/Footer";
 
 import "./App.css";
@@ -29,21 +32,42 @@ function App() {
             <>
               <Hero />
               <Services />
-              <About />
+
+              {/* ✅ Hide About Header + Team section inside About on Home */}
+              <About showHero={false} showTeam={false} />
+
               <Achievements />
-              <Products />
+
+              {/* ✅ Hide Products Header on Home */}
+              <Products showHero={false} showFull={false} />
+
               <Team />
             </>
           }
         />
 
         {/* OTHER PAGES */}
-        <Route path="/services" element={<Services />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/services" element={<Services1 />} />
+
+        <Route path="/services1" element={<Services1 />} />
+
+        {/* About page */}
+        <Route path="/about" element={<About showHero={true} showTeam={true} />} />
+
+        {/* Products page */}
+        <Route path="/products" element={<Products showHero={true} />} />
+
         <Route path="/team" element={<Team />} />
+
+        {/* GALLERY PAGES */}
+        <Route path="/gallery" element={<Gallery1 />} />
+        <Route path="/video-gallery" element={<VideoGallery />} />
+
         <Route path="/careers" element={<Careers />} />
-        <Route path="/contact" element={<Contact />} /> {/* ✅ ADD THIS */}
+        <Route path="/contact" element={<Contact />} />
+
+        {/* OPTIONAL SAFETY ROUTE */}
+        <Route path="/Gallery" element={<Gallery1 />} />
       </Routes>
 
       <Footer />

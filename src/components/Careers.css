@@ -1,8 +1,67 @@
+/* ✅ HEADER BANNER (SAME AS ABOUT PAGE) */
+.about-page-header {
+  width: 100%;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-page-header-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-page-header-overlay h2 {
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.about-page-header-overlay p {
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+.about-page-header-overlay p span {
+  margin: 0 6px;
+  opacity: 0.8;
+}
+
+/* ✅ RESPONSIVE HEADER */
+@media (max-width: 768px) {
+  .about-page-header {
+    height: 260px;
+  }
+
+  .about-page-header-overlay h2 {
+    font-size: 45px;
+  }
+
+  .about-page-header-overlay p {
+    font-size: 14px;
+  }
+}
+
 /* ===== BASE ===== */
 .careers-section {
   padding: 90px 40px;
   background: #ffffff;
-  font-family: "Playfair Display", serif; /* ✅ EXACT FONT */
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* ===== HEADER ===== */
@@ -18,12 +77,14 @@
   font-weight: 600;
   display: inline-block;
   margin-bottom: 12px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .careers-header h2 {
   font-size: 30px;
   font-weight: 600;
   color: #1f2d1f;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* ===== LAYOUT ===== */
@@ -42,6 +103,7 @@
   padding: 26px;
   box-shadow: 0 3px 18px rgba(0, 0, 0, 0.05);
   margin-bottom: 25px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* ===== BOX HEADINGS ===== */
@@ -52,6 +114,7 @@
   margin-bottom: 18px;
   padding-left: 12px;
   border-left: 3px solid #3b6f3c;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* ===== TEXT ===== */
@@ -60,6 +123,7 @@
   font-size: 15px;
   color: #6a6a6a;
   line-height: 1.75;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* ===== LIST ===== */
@@ -74,6 +138,7 @@
 /* ===== LEFT JOB OVERVIEW ===== */
 .job-overview h3 {
   margin-bottom: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .overview-item {
@@ -85,11 +150,13 @@
   font-size: 14px;
   font-weight: 600;
   color: #5a5a5a;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .overview-item p {
   font-size: 15px;
   margin-top: 6px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* ===== APPLY BUTTON ===== */
@@ -101,7 +168,7 @@
   border-radius: 30px;
   font-size: 15px;
   font-weight: 600;
-  font-family: "Playfair Display", serif;
+  font-family: "Times New Roman", Times, serif;
   cursor: pointer;
 }
 
@@ -112,6 +179,7 @@
 /* ===== CLOSING TEXT ===== */
 .closing-text {
   margin-top: 12px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* ===== RESPONSIVE ===== */

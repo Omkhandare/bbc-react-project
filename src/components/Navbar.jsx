@@ -1,31 +1,54 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../assets/images/logo.png";
+
+// ✅ CHANGE THIS PATH ACCORDING TO YOUR PROJECT
+import bbcLogo from "../assets/images/logo.png";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [galleryOpen, setGalleryOpen] = useState(false);
 
   return (
-    <header className="navbar">
-      <div className="nav-left">
-        <img src={logo} alt="BBC Logo" className="logo" />
-      </div>
+    <header className="main-navbar">
+      <div className="navbar-inner">
+        {/* ✅ LOGO */}
+        <div className="navbar-left">
+          <Link to="/" className="navbar-logo">
+            <img src={bbcLogo} alt="BBC Logo" className="bbc-logo" />
+          </Link>
+        </div>
 
-      <nav className={`nav-right ${menuOpen ? "open" : ""}`}>
-        <Link to="/">Home</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/about">About</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/gallery">Gallery</Link>
-        <Link to="/careers">Careers</Link>
-        <Link to="/contact">Contact</Link>
-      </nav>
+        {/* ✅ LINKS */}
+        <nav className="navbar-links">
+          <Link to="/">Home</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/about">About</Link>
+          <Link to="/products">Products</Link>
 
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        <span></span>
-        <span></span>
-        <span></span>
+          {/* ✅ GALLERY DROPDOWN */}
+          <div
+            className="nav-dropdown"
+            onMouseEnter={() => setGalleryOpen(true)}
+            onMouseLeave={() => setGalleryOpen(false)}
+          >
+            <span className="nav-dropdown-title">
+              Gallery <span className="nav-arrow">▼</span>
+            </span>
+
+            <div className={`nav-dropdown-menu ${galleryOpen ? "show" : ""}`}>
+              <Link to="/gallery" className="nav-dropdown-item">
+                Photo Gallery
+              </Link>
+
+              <Link to="/video-gallery" className="nav-dropdown-item">
+                Video Gallery
+              </Link>
+            </div>
+          </div>
+
+          <Link to="/careers">Careers</Link>
+          <Link to="/contact">Contact</Link>
+        </nav>
       </div>
     </header>
   );
