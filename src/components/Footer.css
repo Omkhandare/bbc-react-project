@@ -131,3 +131,15 @@
     padding: 18px 12px;
   }
 }
+.footer-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 8px 0;
+}
+
+.footer-link:hover {
+  color: #ffd700;
+}
+ 
+

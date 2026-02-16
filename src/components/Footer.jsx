@@ -1,5 +1,6 @@
 import "./Footer.css";
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -29,43 +30,35 @@ function Footer() {
         <div className="footer-col footer-links">
           <h4>Quick Links</h4>
 
-          <p>
+          <Link to="/about" className="footer-link">
             <i className="fa-solid fa-angle-right link-icon"></i> About Us
-          </p>
-          <p>
+          </Link>
+
+          <Link to="/contact" className="footer-link">
             <i className="fa-solid fa-angle-right link-icon"></i> Contact Us
-          </p>
-          <p>
+          </Link>
+
+          <Link to="/services" className="footer-link">
             <i className="fa-solid fa-angle-right link-icon"></i> Services
-          </p>
-          <p>
+          </Link>
+
+          <Link to="/products" className="footer-link">
             <i className="fa-solid fa-angle-right link-icon"></i> Products
-          </p>
+          </Link>
         </div>
 
-        {/* RIGHT COLUMN (SOCIAL ICONS) */}
+        {/* RIGHT COLUMN */}
         <div className="footer-col footer-social">
           <div className="social-icons">
-            <a href="/" className="social-circle">
-              <i className="fa-brands fa-twitter"></i>
-            </a>
-            <a href="/" className="social-circle">
-              <i className="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="/" className="social-circle">
-              <i className="fa-brands fa-youtube"></i>
-            </a>
-            <a href="/" className="social-circle">
-              <i className="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="/" className="social-circle">
-              <i className="fa-brands fa-whatsapp"></i>
-            </a>
+            <a href="/" className="social-circle"><i className="fa-brands fa-twitter"></i></a>
+            <a href="/" className="social-circle"><i className="fa-brands fa-facebook-f"></i></a>
+            <a href="/" className="social-circle"><i className="fa-brands fa-youtube"></i></a>
+            <a href="/" className="social-circle"><i className="fa-brands fa-linkedin-in"></i></a>
+            <a href="/" className="social-circle"><i className="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
       </footer>
 
-      {/* COPYRIGHT */}
       <div className="copyright">
         © Bhadra Breeding Center, All Right Reserved.Designed By Sculptor Tech Pvt Ltd
       </div>

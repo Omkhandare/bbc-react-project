@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import ScrollToTop from "./components/ScrollToTop";   // ✅ ADD
+
 import TopBar from "./components/TopBar";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -21,6 +23,8 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />   {/* ✅ ADD HERE */}
+
       <TopBar />
       <Navbar />
 
@@ -33,12 +37,12 @@ function App() {
               <Hero />
               <Services />
 
-              {/* ✅ Hide About Header + Team section inside About on Home */}
+              {/* Hide About Header + Team section inside About on Home */}
               <About showHero={false} showTeam={false} />
 
               <Achievements />
 
-              {/* ✅ Hide Products Header on Home */}
+              {/* Hide Products Header on Home */}
               <Products showHero={false} showFull={false} />
 
               <Team />
@@ -48,7 +52,6 @@ function App() {
 
         {/* OTHER PAGES */}
         <Route path="/services" element={<Services1 />} />
-
         <Route path="/services1" element={<Services1 />} />
 
         {/* About page */}
